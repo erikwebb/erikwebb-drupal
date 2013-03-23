@@ -4,38 +4,35 @@
 #
 # === Parameters
 #
-# Document parameters here.
+# [*version*]
+#   Specify a Drupal version to install. Defaults to the title of this defined
+#   resource.
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*path*]
+#   Specify a path in which Drush will execute the command. Defaults to
+#   "/var/www/html".
 #
-# === Variables
-#
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if it
-#   has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should not be used in preference to class parameters  as of
-#   Puppet 2.6.)
+# [*uri*]
+#   Specify a URI of the Drupal site to use. Defaults to "default".
 #
 # === Examples
 #
 #  class { drupal:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ]
+#    version => '7.21',
 #  }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Erik Webb <erik@erikwebb.net>
 #
 # === Copyright
 #
-# Copyright 2013 Your name here, unless otherwise noted.
+# Copyright 2013 Erik Webb, unless otherwise noted.
 #
 class drupal {
 
+  class { 'drush':
+    version => '5.8.0',
+  }
 
 }

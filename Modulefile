@@ -1,11 +1,11 @@
 name    'erikwebb-drupal'
 version '0.0.1'
-source 'UNKNOWN'
+source 'git://github.com/erikwebb/erikwebb-drupal.git'
 author 'erikwebb'
 license 'Apache License, Version 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
+summary 'Drupal Puppet Module'
+description 'A Puppet module to quickly create a basic Drupal installation.'
+project_page 'http://github.com/erikwebb/erikwebb-drupal'
 
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'puppetlabs/stdlib'
+dependency 'erikwebb/drush'

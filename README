@@ -1,16 +1,24 @@
-drupal
+Puppet module for Drupal
+========================
 
-This is the drupal module.
+A Puppet module to quickly create a basic Drupal installation.
 
-License
--------
+**This should not be used to install a production Drupal site.**
 
+Basic usage
+-----------
 
-Contact
--------
+To install Drupal
 
+    include drupal
+    drupal::core { '7.21':
+      path => '/var/www/html',
+    }
 
-Support
--------
+Dependencies
+------------
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+Some functionality is dependent on other modules:
+
+- [stdlib](http://forge.puppetlabs.com/puppetlabs/stdlib)
+- [drush](http://forge.puppetlabs.com/erikwebb/drush)
