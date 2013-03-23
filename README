@@ -20,5 +20,5 @@ Dependencies
 
 Some functionality is dependent on other modules:
 
-- [stdlib](http://forge.puppetlabs.com/puppetlabs/stdlib)
-- [drush](http://forge.puppetlabs.com/erikwebb/drush)
+- [puppetlabs/stdlib](http://forge.puppetlabs.com/puppetlabs/stdlib)
+- [erikwebb/drush](http://forge.puppetlabs.com/erikwebb/drush)
