@@ -1,5 +1,5 @@
 name    'erikwebb-drupal'
-version '0.0.1'
+version '0.0.2'
 source 'git://github.com/erikwebb/erikwebb-drupal.git'
 author 'erikwebb'
 license 'Apache License, Version 2.0'
