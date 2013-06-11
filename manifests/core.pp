@@ -42,7 +42,7 @@ define drupal::core(
   $path_parts  = split($path, '/')
   $path_count  = size($path_parts)
   $path_prefix = join(values_at($path_parts, join([0, $path_count - 2], '-')), '/')
-  $drupal_dir  = values_at($path_parts, "${path_count-1}")
+  $drupal_dir  = values_at($path_parts, "${path_count - 1}")
 
   drush::exec { 'drush-drupal-core-download':
     command => "pm-download ${package}",
