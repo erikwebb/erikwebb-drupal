@@ -44,7 +44,7 @@ define drupal::core(
   $path_prefix = join(values_at($path_parts, join([0, $path_count - 2], '-')), '/')
   $drupal_dir  = values_at($path_parts, "${path_count - 1}")
 
-  drush::exec { 'drush-drupal-core-download':
+  drush::exec { "${path}-drush-drupal-core-download":
     command => "pm-download ${package}",
     options => [ "--destination=${path_prefix}", "--drupal-project-rename=${drupal_dir}" ],
     # /var/www/html probably exists already, so farce an overwrite
